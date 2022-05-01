@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Birthday</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="cs">
+    <img src="./images/dabao.jpg" id="logo">
+</div>
+<canvas class="canvas" width="1820" height="905"></canvas>
+<p class="text" style="color: #ed3073;">
+    We fell in love
+    <br/>
+    <span id="span_dt_dt"></span>
+</p>
+<audio id="x" autoPlay="true" src="audio/music.flac">
+    <script>
+        setInterval(
+            function toggleSound() {
+                let music = document.getElementById("x");//获取ID
+                if (music.paused) { //判读是否播放
+                    music.paused = false;
+                    music.play(); //没有就播放
+                }
+            },100)
+    </script>
+</audio>
+<script src="main.js"></script>
+</body>
+</html>
